@@ -1,50 +1,58 @@
-# Welcome to your Expo app 👋
+# 👤 User Explorer App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern React Native app built with **Expo**, **TypeScript**, and **TailwindCSS** that fetches and displays users from [reqres.in](https://reqres.in). Includes pagination, search, favorite management, and glassmorphic UI.
 
-## Get started
+---
 
-1. Install dependencies
+## 📱 Features
 
-   ```bash
-   npm install
-   ```
+### 🌐 API Integration
+- Fetches users from both pages of the `https://reqres.in/api/users` endpoint
+- Combines and deduplicates user data
+- Adds support for pull-to-refresh
 
-2. Start the app
+### 🎨 UI/UX
+- Responsive, mobile-first layout
+- Glassmorphism on cards and search bar (blur, translucency, depth)
+- Animated card entry using Reanimated (`FadeInUp`)
+- Full background image for aesthetic depth
+- Safe area support for notch devices
 
-   ```bash
-   npx expo start
-   ```
+### 🧭 Navigation
+- Tab-based navigation (`All Users` and `Favorites`)
+- Icons via `Ionicons`
+- No `(tabs)` label shown in header
 
-In the output, you'll find options to open the app in a
+### 📝 User Management
+- Tap to favorite/unfavorite users (⭐)
+- Realtime toggle reflected in Favorites tab
+- Clean fallback UI if no users found after search
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### 🔍 Search
+- Search bar at top of list
+- Real-time filtering by first/last name
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🧰 Tech Stack
 
-When you're ready, run:
+- ⚛️ React Native + Expo
+- 🟦 TypeScript
+- 💨 TailwindCSS via `nativewind`
+- 🧠 React Context for global state
+- ✨ Reanimated v3 for smooth animations
+- 📱 Fully responsive + supports dark backgrounds
+
+---
+
+## 📦 Setup
 
 ```bash
-npm run reset-project
-```
+git clone https://github.com/your-username/user-explorer-app.git
+cd user-explorer-app
+npm install
+npx expo start
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project uses the free x-api-key: reqres-free-v1.
+To avoid quota limits, consider signing up at reqres.in/signup for your own key.
